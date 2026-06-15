@@ -575,7 +575,7 @@ class App {
 
     loadDataset(name) {
         this.clearAll();
-        this.points = datasets[name];
+        this.points = structuredClone(datasets[name]);
         this.pointsColors = Array(this.points.length).fill('#000000');
         this.drawCanvas();
     }
